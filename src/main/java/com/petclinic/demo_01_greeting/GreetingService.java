@@ -1,4 +1,4 @@
-package com.petclinic.practice;
+package com.petclinic.demo_01_greeting;
 
 public class GreetingService {
 

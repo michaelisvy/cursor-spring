@@ -1,4 +1,4 @@
-package com.petclinic.practice;
+package com.petclinic.demo_01_greeting;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.jupiter.api.Test;

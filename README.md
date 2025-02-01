@@ -21,12 +21,7 @@
     * ask in the prompt "Make GreetingServiceTest a @SpringBootTest and make GreetingService a Spring bean"
     * Run your tests and make sure they are green
 
-## Step 2: refactor `GreetingServiceTest` so it uses Constructor Injection
-* In the composer, ask to refactor `GreetingServiceTest` so it uses Constructor Injection instead of Field Injection
-* As you might know, it is mandatory to explicitly use `@Autowired` for constructor injection in a JUnit test. Did Cursor add it from the start? (in our experience, in most cases, it did not do it properly)
-* If Cursor did not add it, ask to add it explicitly
-
-## Step 3: refactor `VisitRepository` and `Visit` so they are based on JPA and Spring Data JPA
+## Step 2: refactor `VisitRepository` and `Visit` so they are based on JPA and Spring Data JPA
 * Open `VisitReposotory` and `Visit`. As you can see, `VisitRepository` is a mocked repository.
 * Inside Cursor's composer, tag `Visit` and `VisitRepository`
 * Ask to refactor `Visit` so it uses JPA annotations
@@ -40,7 +35,7 @@
     * It should add a `@BeforeEach` setup method to create some sample data
     * Run the test again and make sure it is green
 
-## Step 4: Transaction management inside a test
+## Step 3: Transaction management inside a test
 * First make sure you understand how the `@Transactional` annotation behaves inside a test
 * Make sure you are *not* yet using `@Transactional` inside `VisitServiceTest`
 * Inside `Visit`, make sure that `referenceNumber` is annotated with `@Column(unique = true)`
@@ -49,6 +44,6 @@
 * As you know already, the solution is to use `@Transactional` on top of each of the test methods (or at the class level if you prefer). Paste your error message to composer and ask to fix it. Most likely, it will suggest something much more complicated.
 * Explicitly suggest to add `@Transactional` on top of each of the test methods
 
-## Step 5: understand how in-editor completion works
+## Step 4: understand how in-editor completion works
 * Open `LoggerTest` and look at the way logging is done. It purposely concatenates Strings, while it should have used the parameters `{}` syntax.
 * Ask Cursor to fix it. If you do it once, it should propose to fix it for all the subsequent rows.

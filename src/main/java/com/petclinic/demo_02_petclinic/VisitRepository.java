@@ -1,8 +1,8 @@
-package com.petclinic.core;
-
-import org.springframework.stereotype.Repository;
+package com.petclinic.demo_02_petclinic;
 
 import java.time.LocalDate;
+
+import org.springframework.stereotype.Repository;
 
 @Repository
 public class VisitRepository {

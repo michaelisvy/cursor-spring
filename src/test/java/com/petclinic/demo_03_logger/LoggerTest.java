@@ -1,4 +1,4 @@
-package com.petclinic.practice;
+package com.petclinic.demo_03_logger;
 
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
